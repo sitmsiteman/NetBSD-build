@@ -1,1 +1,1 @@
-scripts for build netbsd
+simple scripts for personal use
