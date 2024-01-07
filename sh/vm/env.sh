@@ -1,0 +1,7 @@
+OBJ="$HOME/obj"
+VM="$HOME/workspace/vm"
+ARCH="evbarm"
+ARCH_MACHINE="evbarm-aarch64"
+KERNEL="DEBUG"
+KERNDIR="$OBJ/sys/arch/$ARCH/compile/$KERNEL"
+KERN_IMG="netbsd.img"
