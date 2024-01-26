@@ -6,7 +6,7 @@ ARCH="amd64"
 JOBS=$(nproc)
 KERN="debug"
 DATE=$(date)
-OBJS="$HOME/obj"
+OBJS="$HOME/netbsd/obj"
 
 echo "Build start at $DATE"
 

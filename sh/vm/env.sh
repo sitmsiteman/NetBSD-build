@@ -1,5 +1,5 @@
-OBJ="$HOME/obj"
-VM="$HOME/workspace/vm"
+OBJ="$HOME/netbsd/obj"
+VM="$HOME/vm"
 ARCH="evbarm"
 ARCH_MACHINE="evbarm-aarch64"
 KERNEL="DEBUG"
