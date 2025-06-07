@@ -18,17 +18,17 @@ echo "$DATE" >>"$INSTALL_LOG"
 echo "$DATE" >>"$ERROR_LOG"
 echo "=========================================="
 echo "Build tools" | tee -a "$INSTALL_LOG" | tee -a "$ERROR_LOG"
-time $NETBSD_SRC/build.sh -U -u -O $OBJS -x -X $NETBSD_XSRC/xsrc -j $JOBS -a "$MACHINE_ARCH" \
+time $NETBSD_SRC/build.sh -U -u -O $OBJS -x -X $NETBSD_XSRC -j $JOBS -a "$MACHINE_ARCH" \
        -m "$MACHINE" \
       tools 1>>"$INSTALL_LOG" 2>>"$ERROR_LOG"
 
 echo "=========================================="
 echo "Build kernel" | tee -a "$INSTALL_LOG" | tee -a "$ERROR_LOG"
-time $NETBSD_SRC/build.sh -U -u -O $OBJS -x -X $NETBSD_XSRC/xsrc -j $JOBS -a "$MACHINE_ARCH" \
+time $NETBSD_SRC/build.sh -U -u -O $OBJS -x -X $NETBSD_XSRC -j $JOBS -a "$MACHINE_ARCH" \
         -m "$MACHINE" kernel="$KERN" 1>"$INSTALL_LOG" 2>>"$ERROR_LOG"
 echo "=========================================="
 # echo "Build userland" | tee -a "$INSTALL_LOG" | tee -a "$ERROR_LOG"
-# time $NETBSD_SRC/build.sh -U -u -O $OBJS -x -X #NETBSD_XSRC/xsrc -j $JOBS -a "$MACHINE_ARCH" \
+# time $NETBSD_SRC/build.sh -U -u -O $OBJS -x -X $NETBSD_XSRC -j $JOBS -a "$MACHINE_ARCH" \
 #       -m "$MACHINE"  release 1>"$INSTALL_LOG" 2>>"$ERROR_LOG"
 # echo "=========================================="
 echo "Error Log:"
